@@ -1,1 +1,11 @@
-https://github.com/mhassini/avec-maven.git
+pipeline {
+    agent any
+
+    stages {
+        stage('Checkout GIT') {
+            steps {
+                sh """mvn -version"""
+            }
+        }
+    }
+}
